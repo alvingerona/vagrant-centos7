@@ -20,8 +20,8 @@ yes | sudo yum install php70 -y;
 yes | sudo yum install php71 -y;
 
 echo "Installing PHP FPM";
-yes | sudo yum install php70-php-fpm -y;
-yes | sudo yum install php71-php-fpm -y;
+yes | sudo yum install php70-php-fpm php70-php-xml.x86_64 php70-php-mbstring.x86_64 php70-php-gd.x86_64 php70-php-common.x86_64 php70-php-pecl-zip.x86_64 -y;
+yes | sudo yum install php71-php-fpm php71-php-xml.x86_64 php71-php-mbstring.x86_64 php71-php-gd.x86_64 php71-php-common.x86_64 php71-php-pecl-zip.x86_64 -y;
 
 echo "Stopping php service";
 sudo systemctl stop php70-php-fpm;
