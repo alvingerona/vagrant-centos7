@@ -46,12 +46,12 @@ Vagrant.configure("2") do |config|
   # argument is a set of non-required options.
 
   # Required sync folder
-  config.vm.synced_folder "/volumes/Elements/vhosts", "/home/vagrant/vhosts"
+  config.vm.synced_folder "e:/vhosts", "/var/www/vhosts"
 
   # Optional synced folders
-  config.vm.synced_folder "/volumes/Elements/projects", "/home/vagrant/projects"
-  config.vm.synced_folder "/volumes/Elements/shells", "/home/vagrant/shells"
-  config.vm.synced_folder "/volumes/Elements/shared", "/home/vagrant/shared"
+  config.vm.synced_folder "e:/projects", "/var/www/projects"
+  config.vm.synced_folder "e:/shells", "/var/www/shells"
+  config.vm.synced_folder "e:/shared", "/var/www/shared"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.

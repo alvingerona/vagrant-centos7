@@ -58,7 +58,7 @@ Action php71-fcgi /cgi-bin/php71.fcgi
 EOF
 
 echo "Appending config files to httpd.conf.";
-echo 'Include /home/vagrant/vhosts/*.conf' >> /etc/httpd/conf/httpd.conf
+sudo echo 'Include /var/www/vhosts/*.conf' >> /etc/httpd/conf/httpd.conf
 
 sudo systemctl enable httpd
 sudo systemctl enable php70-php-fpm
@@ -67,7 +67,7 @@ sudo systemctl enable php71-php-fpm
 #
 # Optional utilities
 #
-yes | sudo yum install php71-php-pdo.x86_64 php71-php-pdo_mysql.x86_64 php70-php-mysqlnd.x86_64
+yes | sudo yum install php71-php-pdo.x86_64 php71-php-pdo_mysql.x86_64 php70-php-mysqlnd.x86_64 php71-php-mysqlnd.x86_64
 
 
 #
